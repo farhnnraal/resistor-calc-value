@@ -105,7 +105,7 @@ const ResistorCalculator: React.FC = () => {
               {colors.map((color) => (
                 <button
                   key={color.name}
-                  className={`w-full md:w-[120px] !text-black !bg-white p-2 rounded ${
+                  className={`w-full md:w-[120px] !text-black bg-white p-2 rounded ${
                     selectedColors[index] === color.value
                       ? getTextColorClass(color.name, true)
                       : 'bg-gray-700 hover:bg-gray-600 text-gray-100'
@@ -127,7 +127,7 @@ const ResistorCalculator: React.FC = () => {
         {/* Tombol hitung */}
         <div className="flex justify-center w-full py-4">
           <button
-            className="rounded w-full bg-red-600 hover:bg-red-700 !text-black !bg-white py-2"
+            className="rounded w-full bg-red-600 hover:bg-red-700 !text-black bg-white py-2"
             onClick={handleCalculate}
           >
             Calculate
