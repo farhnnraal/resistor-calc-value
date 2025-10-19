@@ -49,6 +49,16 @@ select {
   appearance: none;
 }
 
+/* ====== Override tombol agar tidak mengikuti tema perangkat ====== */
 button {
+  background-color: white; /* selalu putih */
+  color-scheme: light; /* pastikan tampil seperti mode terang */
+  color: black; /* teks tetap terlihat */
+  border: none;
   cursor: pointer;
+}
+
+/* Saat hover tombol tetap kontras */
+button:hover {
+  filter: brightness(0.9);
 }
