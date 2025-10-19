@@ -19,7 +19,7 @@ const formatResistance = (value: number): string => {
 };
 
 const ResistorCalculator: React.FC = () => {
-  const [selectedColors, setSelectedColors] = useState<ResistorColor[]>(Array(5).fill(null));
+  const [selectedColors, setSelectedColors] = useState<(ResistorColor | null)[]>(Array(5).fill(null));
   const [resistanceValue, setResistanceValue] = useState<string>('');
   const [ringCount, setRingCount] = useState<number>(4);
 
