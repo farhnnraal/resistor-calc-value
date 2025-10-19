@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Resistor Resistance Value Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deskripsi
+**Resistor Resistance Value Calculator** merupakan web yang digunakan untuk mendukung dan membantu pembelajaran dalam rangkaian elektronika untuk mengetahui nilai hambatan yang terdapat pada resistor dengan cincin warna.  
+Dengan tampilan yang sederhana, cepat, dan mudah digunakan, aplikasi ini sangat cocok untuk pelajar maupun praktisi elektronika yang ingin mengetahui nilai resistansi tanpa repot melakukan perhitungan manual.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Teknologi yang Digunakan
+- **React + Vite** — Framework modern untuk membangun aplikasi web interaktif dan cepat.  
+- **TypeScript** — Memberikan keamanan tipe data dan meminimalkan kesalahan pemrograman.  
+- **TailwindCSS v4** — Untuk tampilan UI yang responsif, modern, dan mudah dikustomisasi.  
+- **IBM Granite AI** — Model AI khusus dekoder dari IBM yang dioptimalkan untuk aplikasi perusahaan, mendukung berbagai kasus penggunaan seperti bahasa, kode, dan visi.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Fitur
+- 💡 **Kalkulasi Nilai Resistor Otomatis** — Hitung nilai hambatan berdasarkan warna gelang resistor (4 atau 5 gelang).  
+- 🎨 **Antarmuka Interaktif** — Pemilihan warna gelang resistor secara visual dan mudah.  
+- ⚙️ **Output Otomatis dengan Satuan Ohm (Ω)** — Hasil perhitungan ditampilkan dengan satuan yang disederhanakan seperti `1kΩ`, `1MΩ`, dll.  
+- 📱 **Desain Responsif** — Dapat digunakan di berbagai perangkat (desktop, tablet, atau ponsel).  
+- ⚡ **Kinerja Cepat dan Ringan** — Dibangun dengan komponen yang efisien dan ringan tanpa memerlukan perangkat superior.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Petunjuk Penggunaan
+1. Akses web dari [https://resistor-resistance-value-calculator.netlify.app/](https://resistor-resistance-value-calculator.netlify.app/)  
+2. Tambahkan warna gelang resistor sesuai urutan gelangnya.  
+3. Klik tombol **Calculate** untuk menghitung nilai resistor.  
+4. Selesai! Nilai resistor kamu langsung muncul dengan satuan otomatis seperti Ω, kΩ, atau MΩ.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Penjelasan Dukungan AI
+Aplikasi ini dikembangkan dengan dukungan dari **IBM Granite AI**, model AI dekoder buatan IBM yang dirancang untuk mendukung pengembangan aplikasi perusahaan.  
+Granite AI membantu dalam tahap pengembangan hingga produksi dengan memastikan efisiensi dan keakuratan hasil berdasarkan data nyata.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Beberapa keunggulan utama yang ditawarkan:
+- 🔁 **Dinamis** — Pertukaran dan perubahan konten dilakukan dengan sangat mulus, serta desain laman web dapat menyesuaikan semua jenis layar pengguna.  
+- 💨 **Ringan** — Tidak memerlukan perangkat superior untuk bekerja dengan optimal.  
+- ⚡ **Cepat** — Siap bekerja dan memberikan hasil hanya dalam sekejap.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+© 2025 Farhan Raditya Al Gazali  
+*Resistor Resistance Value Calculator — Sebuah alat sederhana namun cerdas untuk dunia elektronika.*
