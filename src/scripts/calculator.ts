@@ -1,15 +1,18 @@
-enum ResistorColor {
-  black = 0,
-  brown = 1,
-  red = 2,
-  orange = 3,
-  yellow = 4,
-  green = 5,
-  blue = 6,
-  violet = 7,
-  grey = 8,
-  white = 9,
-}
+const ResistorColor = {
+  black: 0,
+  brown: 1,
+  red: 2,
+  orange: 3,
+  yellow: 4,
+  green: 5,
+  blue: 6,
+  violet: 7,
+  grey: 8,
+  white: 9,
+} as const;
+
+// ✅ Tambahkan baris ini
+type ResistorColor = (typeof ResistorColor)[keyof typeof ResistorColor];
 
 function colorToValue(color: ResistorColor): number {
   return color;

@@ -1,17 +1,20 @@
-export enum ResistorColor {
-  black = 0,
-  brown = 1,
-  red = 2,
-  orange = 3,
-  yellow = 4,
-  green = 5,
-  blue = 6,
-  violet = 7,
-  grey = 8,
-  white = 9,
-  gold = -1, // For multiplier 0.1
-  silver = -2, // For multiplier 0.01
-}
+export const ResistorColor = {
+  black: 0,
+  brown: 1,
+  red: 2,
+  orange: 3,
+  yellow: 4,
+  green: 5,
+  blue: 6,
+  violet: 7,
+  grey: 8,
+  white: 9,
+  gold: -1,   // For multiplier 0.1
+  silver: -2, // For multiplier 0.01
+} as const;
+
+// ✅ Type alias untuk digunakan di komponen React atau fungsi
+export type ResistorColor = (typeof ResistorColor)[keyof typeof ResistorColor];
 
 export const colorNames: string[] = [
   'Black',
@@ -61,7 +64,7 @@ export function calculateResistance(bands: ResistorColor[]): { value: number; to
     value = (colorToValue(bands[0]) * 10 + colorToValue(bands[1])) * getMultiplierValue(bands[2]);
   } else {
     // 5-band resistor: 3 digits + multiplier + tolerance
-    value = (colorToValue(bands[0]) * 100 + colorToValue(bands[1]) * 10 + colorToValue(bands[2])) * 
+    value = (colorToValue(bands[0]) * 100 + colorToValue(bands[1]) * 10 + colorToValue(bands[2])) *
             getMultiplierValue(bands[3]);
   }
 
