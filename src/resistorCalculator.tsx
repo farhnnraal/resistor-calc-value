@@ -105,7 +105,7 @@ const ResistorCalculator: React.FC = () => {
               {colors.map((color) => (
                 <button
                   key={color.name}
-                  className={`w-full md:w-[120px] !text-black p-2 rounded ${
+                  className={`w-full md:w-[120px] !text-black !bg-white p-2 rounded ${
                     selectedColors[index] === color.value
                       ? getTextColorClass(color.name, true)
                       : 'bg-gray-700 hover:bg-gray-600 text-gray-100'
